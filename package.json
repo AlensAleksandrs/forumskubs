@@ -18,25 +18,25 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Alens Aleksandrs Cerna",
+        "email": "contact@alens.lv",
+        "url": "https://alens.lv"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Event"
         ]
     },
     "keywords": [
         "ghost",
         "theme",
-        "ghost-theme"
+        "forumskubs"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/AlensAleksandrs/forumskubs.git"
     },
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",

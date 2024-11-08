@@ -15,41 +15,51 @@
 </head>
 
 <body class="{{body_class}}">
+<style>
+    .gh-head {
+        background-image: url({{asset 'images/website-cover.png'}});
+    }
+</style>
 <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+    <header id="gh-head" class="gh-head">
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button">
+        <nav class="gh-head-inner gh-container">
+
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-hero">
+                    {{#if @site.logo}}
+                        <img class="gh-head-brand-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                    <!--            <a class="gh-burger" role="button" aria-label="menu">-->
+                    <!--                <div class="gh-burger-box">-->
+                    <!--                    <div class="gh-burger-inner"></div>-->
+                    <!--                </div>-->
+                    <!--            </a>-->
+                    <div class="gh-head-brand-socials">
+                        <a class="gh-head-brand-socials-link" href="https://www.facebook.com/KubsKubam" target="_blank">
+                            <img class="gh-social-icon" src="{{asset 'images/facebook_icon.svg'}}" alt="(Facebook)"/>
+                            <p class="gh-social-username">kubskubam</p>
+                        </a>
+                        <a class="gh-head-brand-socials-link" href="https://www.instagram.com/forumskubs/" target="_blank">
+                            <img class="gh-social-icon" src="{{asset 'images/instagram_icon.svg'}}" alt="(Instagram)"/>
+                            <p class="gh-social-username">forumskubs</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gh-head-menu">
+                {{navigation}}
+            </div>
+            <a class="gh-burger" role="button" aria-label="menu">
                 <div class="gh-burger-box">
                     <div class="gh-burger-inner"></div>
                 </div>
             </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <main class="gh-main">
 
@@ -59,8 +69,9 @@
             <section class="gh-error-content">
 
                 <h1 class="gh-error-code">{{statusCode}}</h1>
-                <p class="gh-error-description">{{message}}</p>
-                <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+                <p class="gh-error-description">Lapa nav atrasta</p>
+                <p>Diemžēl, lapa, kuru Jūs meklējat, neeksistē vai arī tā ir pārvietota.</p>
+                <p class="gh-error-link"><a href="{{@site.url}}">Atgriezties sākumlapā →</a></p>
 
                 {{#if errorDetails}}
                 <section class="gh-error-stack">
@@ -88,14 +99,14 @@
 </main>
 
 <footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
-        </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
-    </div>
+<!--    <div class="gh-container">-->
+<!--        <div class="gh-foot-menu">-->
+<!--            {{navigation type="secondary"}}-->
+<!--        </div>-->
+<!--        <div class="gh-foot-meta">-->
+<!--            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>-->
+<!--        </div>-->
+<!--    </div>-->
 </footer>
 
 </div>

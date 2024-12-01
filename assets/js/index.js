@@ -7,15 +7,6 @@ import "../css/index.css";
 import menuOpen from "./menuOpen";
 import infiniteScroll from "./infiniteScroll";
 
-const listAssets = require("./helpers/list-assets.js");
-
-
 // Call the menu and infinite scroll functions
 menuOpen();
 infiniteScroll();
-
-module.exports = {
-    helpers: {
-        listAssets
-    }
-};

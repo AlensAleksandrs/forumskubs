@@ -37,6 +37,24 @@
     text-align: justify;
 }
 
+.sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 5rem;
+}
+
+.sponsor-list img {
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.sponsor-list img:hover {
+    margin-top: 0;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
 @media (max-width: 900px) {
     .gh-featured-container {display: none;}
     .gh-featured-post {display: grid}

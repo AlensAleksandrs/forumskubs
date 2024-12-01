@@ -1,3 +1,44 @@
 .gh-featured-container {
-    padding: 25rem;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.gh-featured-post {
+    display: none;
+    padding: 3rem 0;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+.gh-image-container {
+    width: 100%;
+    color: var(--color-highlight);
+    background-size: contain;
+    aspect-ratio: 2512/400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gh-container h2 {
+    margin-bottom: 2rem;
+}
+
+.gh-container-dark {
+    background-color: var(--color-base);
+}
+
+.gh-paragraph-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    .gh-featured-container {display: none;}
+    .gh-featured-post {display: grid}
+    .gh-paragraph-container {grid-template-columns: 1fr;}
 }

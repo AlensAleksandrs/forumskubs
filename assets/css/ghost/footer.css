@@ -5,53 +5,120 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8vmin 4vmin 4vmin;
+    padding: 2vmin 4vmin 4vmin;
+    background-color: var(--color-base);
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.2em;
 }
 
 .gh-foot .gh-container {
-    width: auto;
+    display: grid;
+    grid-gap: 150px;
+    grid-template-columns: auto 1fr;
 }
 
-.gh-foot a {
-    color: inherit;
+.gh-brand {
+    grid-column-start: 1;
 }
 
-.gh-foot-menu {
+.gh-brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.gh-brand-logo img {
+    max-width: 200px;
+    user-select: none;
+}
+
+.gh-copyright {
+    margin: 10px 0;
+    user-select: none;
+    cursor: default;
+    text-align: center;
+}
+
+.gh-author {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.gh-author:hover p {
+    color: var(--color-highlight);
+}
+
+.gh-author-logo {
+    max-width: 120px;
+    margin: 10px;
+}
+
+.gh-items {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.gh-foot-menu .nav {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: 1.8rem;
+.gh-table {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto 1fr;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.2em;
 }
 
-.gh-foot-menu .nav li {
-    margin: 0 1.5vmin;
-    padding: 0;
+.gh-titles {
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.gh-foot-menu .nav a {
-    display: inline-block;
-    padding: 3px 0;
+.gh-titles p {
+    font-weight: 600;
+    font-size: 1.4rem;
+    user-select: none;
+    cursor: default;
+}
+
+.gh-options {
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gh-options a {
+    font-weight: 400;
+    font-size: 1.1rem;
+    user-select: none;
+    color: var(--color-text);
     text-decoration: none;
-    box-shadow: 0 -1px 0 0 currentcolor inset;
+    text-transform: uppercase;
 }
 
-.gh-foot-meta {
+.gh-options li {
     margin: 2rem 0;
-    font-size: 1.5rem;
-    text-align: center;
-    opacity: 0.75;
+    cursor: pointer;
 }
 
-@media (max-width: 700px) {
-    .gh-foot-menu .nav {
-        font-size: 1.6rem;
+.gh-options li:hover a {
+    color: var(--color-highlight);
+}
+
+@media (max-width: 1024px) {
+    .gh-foot .gh-container {
+        grid-template-columns: 1fr;
     }
+    .gh-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .gh-table {display: none;}
 }
